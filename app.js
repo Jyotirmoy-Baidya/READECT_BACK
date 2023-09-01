@@ -15,8 +15,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const cookieParser = require("cookie-parser");
 const {
   getOtherReader,
-
-} = require("../controllers/otherReaderController");
+} = require("./controllers/otherReaderController");
 
 const limiter = rateLimit({
   max: 1000,
