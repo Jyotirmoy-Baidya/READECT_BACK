@@ -23,6 +23,14 @@ exports.getReader = catchAsync(async (req, res) => {
       select: "-userId -content -dislikes -likes -firstUploadTime -uploadDate",
     })
     .populate({
+      path: "likedArticles",
+      select: "-userId -content -dislikes -likes -firstUploadTime -uploadDate",
+    })
+    .populate({
+      path: "likedBooks",
+      select: "-userId -content -dislikes -likes -firstUploadTime -uploadDate",
+    })
+    .populate({
       path: "poems",
       select: "name title tags coverImage uploadDate -userId",
     })
