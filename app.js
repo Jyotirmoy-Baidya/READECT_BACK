@@ -31,10 +31,10 @@ app.use("/api", limiter);
 app.use(cookieParser());
 
 //set security http headers (preventing anyone to manipulate headers)
-// app.use(helmet());
+app.use(helmet());
 
 //Data sanitization againt NoSQL query injection
-// app.use(mongoSanitize());
+app.use(mongoSanitize());
 
 app.use(express.json());
 
