@@ -119,7 +119,7 @@ readerSchema.virtual("books", {
 });
 
 readerSchema.virtual("shortStories", {
-  ref: "Poem",
+  ref: "ShortStory",
   foreignField: "userId",
   localField: "_id",
 });
